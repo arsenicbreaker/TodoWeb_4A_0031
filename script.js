@@ -21,14 +21,17 @@ btntambah.addEventListener("click", function () {
 
   spanbaru.innerHTML = teksTugas;
   datebaru.innerHTML = tanggalTugas;
-  btnDelete.innerHTML = "Delete";
+  btnStatus.innerHTML = "progress";
   btnEdit.innerHTML = "Edit";
+  btnDelete.innerHTML = "Delete";
+
   listbaru.appendChild(spanbaru);
   listbaru.appendChild(datebaru);
+  listbaru.appendChild(btnStatus);
   listbaru.appendChild(btnEdit);
   listbaru.appendChild(btnDelete);
+
   daftarTugas.appendChild(listbaru);
-  btnStatus.innerHTML = "progress";
 
   btnStatus.addEventListener("click", function () {
     if (btnStatus.innerHTML === "progress") {
@@ -37,13 +40,6 @@ btntambah.addEventListener("click", function () {
       btnStatus.innerHTML = "progress";
     }
   });
-
-  listbaru.appendChild(spanbaru);
-  listbaru.appendChild(datebaru);
-  listbaru.appendChild(btnStatus);
-  listbaru.appendChild(btnEdit);
-  listbaru.appendChild(btnDelete);
-  daftarTugas.appendChild(listbaru);
 
   const warnabaru = document.querySelectorAll("li");
   warnabaru.forEach((item, index) => {
