@@ -54,6 +54,10 @@ btntambah.addEventListener("click", function () {
     }
   });
 
+  btnDelete.addEventListener("click", function () {
+    daftarTugas.removeChild(listbaru);
+  });
+  
   const warnabaru = document.querySelectorAll("li");
   warnabaru.forEach((item, index) => {
     if (index % 2 === 0) {
