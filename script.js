@@ -47,6 +47,11 @@ btntambah.addEventListener("click", function () {
   });
 
   btnEdit.addEventListener("click", function () {
+    let tugasBaru = prompt("Edit tugas:", spanbaru.innerHTML);
+
+    if (tugasBaru !== "") {
+      spanbaru.innerHTML = tugasBaru;
+    }
   });
 
   const warnabaru = document.querySelectorAll("li");
@@ -57,7 +62,6 @@ btntambah.addEventListener("click", function () {
       item.style.color = "green";
     }
   });
-
 
   inputTugas.value = "";
 });
