@@ -46,6 +46,9 @@ btntambah.addEventListener("click", function () {
     }
   });
 
+  btnEdit.addEventListener("click", function () {
+  });
+
   const warnabaru = document.querySelectorAll("li");
   warnabaru.forEach((item, index) => {
     if (index % 2 === 0) {
@@ -54,6 +57,7 @@ btntambah.addEventListener("click", function () {
       item.style.color = "green";
     }
   });
+
 
   inputTugas.value = "";
 });
