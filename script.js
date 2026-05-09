@@ -15,12 +15,18 @@ btntambah.addEventListener("click", function () {
   let listbaru = document.createElement("li");
   let spanbaru = document.createElement("span");
   let btnStatus = document.createElement("button");
-  let datebaru = document.createElement("date");
+  let btnDelete = document.createElement("button");
+  let btnEdit = document.createElement("button");
+  let datebaru = document.createElement("span");
 
   spanbaru.innerHTML = teksTugas;
   datebaru.innerHTML = tanggalTugas;
+  btnDelete.innerHTML = "Delete";
+  btnEdit.innerHTML = "Edit";
   listbaru.appendChild(spanbaru);
   listbaru.appendChild(datebaru);
+  listbaru.appendChild(btnEdit);
+  listbaru.appendChild(btnDelete);
   daftarTugas.appendChild(listbaru);
   btnStatus.innerHTML = "progress";
 
@@ -35,6 +41,8 @@ btntambah.addEventListener("click", function () {
   listbaru.appendChild(spanbaru);
   listbaru.appendChild(datebaru);
   listbaru.appendChild(btnStatus);
+  listbaru.appendChild(btnEdit);
+  listbaru.appendChild(btnDelete);
   daftarTugas.appendChild(listbaru);
 
   const warnabaru = document.querySelectorAll("li");
