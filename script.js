@@ -55,9 +55,12 @@ btntambah.addEventListener("click", function () {
   });
 
   btnDelete.addEventListener("click", function () {
-    daftarTugas.removeChild(listbaru);
+    let yakin = confirm("Are you sure to delete?");
+    if (yakin) {
+      daftarTugas.removeChild(listbaru);
+    }
   });
-  
+
   const warnabaru = document.querySelectorAll("li");
   warnabaru.forEach((item, index) => {
     if (index % 2 === 0) {
