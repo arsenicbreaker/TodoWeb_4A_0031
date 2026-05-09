@@ -33,13 +33,16 @@ btntambah.addEventListener("click", function () {
   listbaru.appendChild(btnEdit);
   listbaru.appendChild(btnDelete);
   listbaru.appendChild(status);
+
   daftarTugas.appendChild(listbaru);
 
   checkboxStatus.addEventListener("click", function () {
     if (checkboxStatus.checked) {
       status.innerHTML = "done";
+      spanbaru.style.textDecoration = "line-through";
     } else {
       status.innerHTML = "progress";
+      spanbaru.style.textDecoration = "none";
     }
   });
 
