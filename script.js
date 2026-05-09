@@ -14,30 +14,32 @@ btntambah.addEventListener("click", function () {
 
   let listbaru = document.createElement("li");
   let spanbaru = document.createElement("span");
-  let btnStatus = document.createElement("button");
+  let checkboxStatus = document.createElement("input");
+  let status = document.createElement("p");
   let btnDelete = document.createElement("button");
   let btnEdit = document.createElement("button");
   let datebaru = document.createElement("span");
 
   spanbaru.innerHTML = teksTugas;
   datebaru.innerHTML = tanggalTugas;
-  btnStatus.innerHTML = "progress";
+  checkboxStatus.type = "checkbox";
+  status.innerHTML = "progress";
   btnEdit.innerHTML = "Edit";
   btnDelete.innerHTML = "Delete";
 
   listbaru.appendChild(spanbaru);
   listbaru.appendChild(datebaru);
-  listbaru.appendChild(btnStatus);
+  listbaru.appendChild(checkboxStatus);
   listbaru.appendChild(btnEdit);
   listbaru.appendChild(btnDelete);
-
+  listbaru.appendChild(status);
   daftarTugas.appendChild(listbaru);
 
-  btnStatus.addEventListener("click", function () {
-    if (btnStatus.innerHTML === "progress") {
-      btnStatus.innerHTML = "done";
+  checkboxStatus.addEventListener("click", function () {
+    if (checkboxStatus.checked) {
+      status.innerHTML = "done";
     } else {
-      btnStatus.innerHTML = "progress";
+      status.innerHTML = "progress";
     }
   });
 
