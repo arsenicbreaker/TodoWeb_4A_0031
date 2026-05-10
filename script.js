@@ -24,6 +24,7 @@ btntambah.addEventListener("click", function () {
   spanbaru.className = "task-name";
 
   datebaru.innerHTML = tanggalTugas;
+  datebaru.className = "task-date";
 
   checkboxStatus.type = "checkbox";
 
