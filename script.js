@@ -21,10 +21,16 @@ btntambah.addEventListener("click", function () {
   let datebaru = document.createElement("span");
 
   spanbaru.innerHTML = teksTugas;
+  spanbaru.className = "task-name";
+
   datebaru.innerHTML = tanggalTugas;
+
   checkboxStatus.type = "checkbox";
+
   status.innerHTML = "progress";
+
   btnEdit.innerHTML = "Edit";
+
   btnDelete.innerHTML = "Delete";
 
   listbaru.appendChild(spanbaru);
