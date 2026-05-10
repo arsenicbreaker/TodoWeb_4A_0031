@@ -28,20 +28,26 @@ button:hover {
   background: #4338ca;
 }
 
+
 li {
-    margin-top: 10px;
-    background: #f8fafc;
-    padding: 10px;
-    border-radius: 6px;
-    display: flex;
-    justify-content: space-between;
+  margin-top: 10px;
+  background: #f8fafc;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+}
+
+li .task-name {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .hapus {
-    background: #ef4444;
+  background: #ef4444;
 }
 
 .hapus:hover {
-    background: #dc2626;
+  background: #dc2626;
 }
-

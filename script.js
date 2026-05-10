@@ -27,12 +27,16 @@ btntambah.addEventListener("click", function () {
   datebaru.className = "task-date";
 
   checkboxStatus.type = "checkbox";
+  checkboxStatus.className = "task-checkbox";
 
   status.innerHTML = "progress";
+  status.className = "status-badge";
 
   btnEdit.innerHTML = "Edit";
+  btnEdit.className = "btn-edit";
 
   btnDelete.innerHTML = "Delete";
+  btnDelete.className = "btn-delete";
 
   listbaru.appendChild(spanbaru);
   listbaru.appendChild(datebaru);
