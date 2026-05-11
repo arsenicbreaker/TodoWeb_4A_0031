@@ -87,6 +87,7 @@ li input[type="checkbox"] {
   accent-color: #4f46e5;
   cursor: pointer;
   flex-shrink: 0;
+  flex: none;
 }
 
 .hapus {
