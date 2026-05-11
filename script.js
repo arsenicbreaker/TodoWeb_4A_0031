@@ -13,6 +13,7 @@ btntambah.addEventListener("click", function () {
   }
 
   let listbaru = document.createElement("li");
+  let taskInfo = document.createElement("div");
   let spanbaru = document.createElement("span");
   let checkboxStatus = document.createElement("input");
   let status = document.createElement("p");
@@ -22,6 +23,8 @@ btntambah.addEventListener("click", function () {
 
   checkboxStatus.type = "checkbox";
   checkboxStatus.className = "task-checkbox";
+
+  taskInfo.className = "task-info";
 
   spanbaru.innerHTML = teksTugas;
   spanbaru.className = "task-name";
@@ -39,9 +42,10 @@ btntambah.addEventListener("click", function () {
   btnDelete.className = "btn-delete";
 
   listbaru.appendChild(checkboxStatus);
-  listbaru.appendChild(spanbaru);
+  taskInfo.appendChild(spanbaru);
+  taskInfo.appendChild(datebaru);
+  listbaru.appendChild(taskInfo);
   listbaru.appendChild(status);
-  listbaru.appendChild(datebaru);
   listbaru.appendChild(btnEdit);
   listbaru.appendChild(btnDelete);
 
@@ -74,14 +78,15 @@ btntambah.addEventListener("click", function () {
     }
   });
 
-  const warnabaru = document.querySelectorAll("li");
-  warnabaru.forEach((item, index) => {
-    if (index % 2 === 0) {
-      item.style.color = "red";
-    } else {
-      item.style.color = "green";
-    }
-  });
+  // const warnabaru = document.querySelectorAll("li");
+  // warnabaru.forEach((item, index) => {
+  //   if (index % 2 === 0) {
+  //     item.style.color = "red";
+  //   } else {
+  //     item.style.color = "green";
+  //   }
+  // });
 
   inputTugas.value = "";
+  tanggal.value = "";
 });
