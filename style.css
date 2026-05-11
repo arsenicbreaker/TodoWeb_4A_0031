@@ -1,5 +1,5 @@
 body {
-  font-family: inherit;
+  font-family: poppins;
   padding: 5px 20px;
 }
 
@@ -98,10 +98,18 @@ li input[type="checkbox"] {
   flex: none;
 }
 
-.hapus {
+.btn-edit {
+  background: #fbbf24;
+}
+
+.btn-edit:hover {
+  background: #f59e0b;
+}
+
+.btn-delete {
   background: #ef4444;
 }
 
-.hapus:hover {
+.btn-delete:hover {
   background: #dc2626;
 }

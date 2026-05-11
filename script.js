@@ -31,7 +31,7 @@ btntambah.addEventListener("click", function () {
 
   status.innerHTML = "progress";
   status.className = "status-badge";
-  
+
   datebaru.innerHTML = tanggalTugas;
   datebaru.className = "task-date";
 
@@ -65,9 +65,14 @@ btntambah.addEventListener("click", function () {
 
   btnEdit.addEventListener("click", function () {
     let tugasBaru = prompt("Edit tugas:", spanbaru.innerHTML);
+    let tanggalBaru = prompt("Edit tanggal:", datebaru.innerHTML);
 
-    if (tugasBaru !== "") {
+    if (tugasBaru !== null && tugasBaru !== "") {
       spanbaru.innerHTML = tugasBaru;
+    }
+
+    if (tanggalBaru !== null && tanggalBaru !== "") {
+      datebaru.innerHTML = tanggalBaru;
     }
   });
 
