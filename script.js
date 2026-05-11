@@ -20,17 +20,17 @@ btntambah.addEventListener("click", function () {
   let btnEdit = document.createElement("button");
   let datebaru = document.createElement("span");
 
-  spanbaru.innerHTML = teksTugas;
-  spanbaru.className = "task-name";
-
-  datebaru.innerHTML = tanggalTugas;
-  datebaru.className = "task-date";
-
   checkboxStatus.type = "checkbox";
   checkboxStatus.className = "task-checkbox";
 
+  spanbaru.innerHTML = teksTugas;
+  spanbaru.className = "task-name";
+
   status.innerHTML = "progress";
   status.className = "status-badge";
+  
+  datebaru.innerHTML = tanggalTugas;
+  datebaru.className = "task-date";
 
   btnEdit.innerHTML = "Edit";
   btnEdit.className = "btn-edit";
@@ -38,21 +38,23 @@ btntambah.addEventListener("click", function () {
   btnDelete.innerHTML = "Delete";
   btnDelete.className = "btn-delete";
 
-  listbaru.appendChild(spanbaru);
-  listbaru.appendChild(datebaru);
   listbaru.appendChild(checkboxStatus);
+  listbaru.appendChild(spanbaru);
+  listbaru.appendChild(status);
+  listbaru.appendChild(datebaru);
   listbaru.appendChild(btnEdit);
   listbaru.appendChild(btnDelete);
-  listbaru.appendChild(status);
 
   daftarTugas.appendChild(listbaru);
 
   checkboxStatus.addEventListener("click", function () {
     if (checkboxStatus.checked) {
       status.innerHTML = "done";
+      status.classList.add("done");
       spanbaru.style.textDecoration = "line-through";
     } else {
       status.innerHTML = "progress";
+      status.classList.remove("done");
       spanbaru.style.textDecoration = "none";
     }
   });
