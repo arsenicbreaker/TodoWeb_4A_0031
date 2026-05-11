@@ -41,7 +41,6 @@ li {
   gap: 5px;
 }
 
-
 ul {
   padding-left: 0;
   list-style: none;
@@ -50,9 +49,10 @@ ul {
 
 li .task-name {
   flex: 1;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
 }
+
 
 li .task-date {
   font-size: 12px;
