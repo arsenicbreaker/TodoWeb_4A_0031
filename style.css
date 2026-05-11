@@ -47,6 +47,15 @@ li .task-name {
   font-weight: 500;
 }
 
+li .task-date {
+  font-size: 12px;
+  color: #818cf8;
+  background: #eef2ff;
+  padding: 2px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
 .hapus {
   background: #ef4444;
 }
