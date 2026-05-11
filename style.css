@@ -41,6 +41,13 @@ li {
   gap: 5px;
 }
 
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+
 li .task-name {
   flex: 1;
   font-size: 14px;
@@ -71,6 +78,13 @@ li .status-badge.done {
   color: #15803d;
 }
 
+li input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #4f46e5;
+  cursor: pointer;
+  flex-shrink: 0;
+}
 
 .hapus {
   background: #ef4444;
