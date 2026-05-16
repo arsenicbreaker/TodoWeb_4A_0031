@@ -1,19 +1,19 @@
-const inputTugas = document.getElementById("inputTugas");
-const btntambah = document.getElementById("btnTambah");
-const daftarTugas = document.getElementById("daftarTugas");
-const tanggal = document.getElementById("inputTanggal");
+const inputTugas = $("#inputTugas");
+const daftarTugas = $("#daftarTugas");
+const btntambah = $("#btnTambah");
+const tanggal = $("#inputTanggal");
 
-btntambah.addEventListener("click", function () {
-  let teksTugas = inputTugas.value;
-  let tanggalTugas = tanggal.value;
+$("#btnTambah").on("click", function () {
+  let teksTugas = inputTugas.val();
+  let tanggalTugas = tanggal.val();
 
   if (teksTugas === "") {
     alert("Data harus dimasukkan!");
     return;
   }
 
-  let listbaru = document.createElement("li");
-  let taskInfo = document.createElement("div");
+  let listbaru = document.createElement("li"); 
+  let taskInfo = document.createElement("div"); 
   let spanbaru = document.createElement("span");
   let checkboxStatus = document.createElement("input");
   let status = document.createElement("p");
@@ -21,7 +21,7 @@ btntambah.addEventListener("click", function () {
   let btnEdit = document.createElement("button");
   let datebaru = document.createElement("span");
 
-  checkboxStatus.type = "checkbox";
+  checkboxStatus.type = "checkbox"; 
   checkboxStatus.className = "task-checkbox";
 
   taskInfo.className = "task-info";
@@ -41,17 +41,17 @@ btntambah.addEventListener("click", function () {
   btnDelete.innerHTML = "Delete";
   btnDelete.className = "btn-delete";
 
-  listbaru.appendChild(checkboxStatus);
-  taskInfo.appendChild(spanbaru);
-  taskInfo.appendChild(datebaru);
-  listbaru.appendChild(taskInfo);
-  listbaru.appendChild(status);
-  listbaru.appendChild(btnEdit);
-  listbaru.appendChild(btnDelete);
+  listbaru.append(checkboxStatus);
+  taskInfo.append(spanbaru);
+  taskInfo.append(datebaru);
+  listbaru.append(taskInfo);
+  listbaru.append(status);
+  listbaru.append(btnEdit);
+  listbaru.append(btnDelete);
 
-  daftarTugas.appendChild(listbaru);
+  daftarTugas.append(listbaru);
 
-  checkboxStatus.addEventListener("click", function () {
+  $(checkboxStatus).on("click", function () {
     if (checkboxStatus.checked) {
       status.innerHTML = "done";
       status.classList.add("done");
@@ -63,7 +63,7 @@ btntambah.addEventListener("click", function () {
     }
   });
 
-  btnEdit.addEventListener("click", function () {
+  $(btnEdit).on("click", function () {
     let tugasBaru = prompt("Edit tugas:", spanbaru.innerHTML);
     let tanggalBaru = prompt("Edit tanggal:", datebaru.innerHTML);
 
@@ -76,7 +76,7 @@ btntambah.addEventListener("click", function () {
     }
   });
 
-  btnDelete.addEventListener("click", function () {
+  $(btnDelete).on("click", function () {
     let yakin = confirm("Are you sure to delete?");
     if (yakin) {
       daftarTugas.removeChild(listbaru);
@@ -92,6 +92,6 @@ btntambah.addEventListener("click", function () {
   //   }
   // });
 
-  inputTugas.value = "";
-  tanggal.value = "";
+  inputTugas.val("");
+  tanggal.val("");
 });
